@@ -38,17 +38,14 @@ body {
     font-family: "Lora", serif;
     font-family: "Work Sans", sans-serif;
 }
-
 h1,
 h2 {
     font-family: "Lora", serif;
     text-align: center;
 }
-
 h2 {
     font-size: 3em;
 }
-
 p {
     font-family: "Work Sans", sans-serif;
     font-size: 1.4em;
@@ -58,13 +55,16 @@ a {
     text-decoration: none;
     color: var(--main-fg-dark);
 }
+a:hover {
+    text-decoration: underline;
+}
 
 /****************************************************************************/
 nav {
     position: sticky;
     top: 0;
-    height: 10vh;
-    margin-top: -10vh;
+    height: 5vh;
+    margin-top: -5vh;
 
     background: var(--main-bg-dark);
     color: var(--main-fg-dark);
@@ -76,6 +76,9 @@ nav {
     /* z-index must be greater than z-index from video!!! */
     z-index: 1;
 }
+nav .logo {
+    width: 50%;
+}
 
 nav > ul {
     justify-content: flex-end;
@@ -84,7 +87,7 @@ nav > ul {
     list-style: none;
 }
 nav > ul > li {
-    margin: 0 6.5%;
+    margin-left: 6.5%;
 }
 
 /****************************************************************************/
@@ -103,14 +106,17 @@ section:nth-of-type(even) {
 /****************************************************************************/
 #intro {
     height: 100vh;
-    display: flex;
-    justify-content: space-between;
 }
 #intro .text {
     width: 45%;
-    text-align: center;
-    font-family: "Lora", serif;
     align-self: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* text-align: center; */
+    font-family: "Lora", serif;
 }
 #intro h1 {
     font-size: 5em;
@@ -150,11 +156,11 @@ section:nth-of-type(even) {
 }
 
 /****************************************************************************/
-#feature {
+#featured {
     flex-direction: column;
     padding: 5% 0;
 }
-#feature p {
+#featured p {
     width: 50%;
     text-align: justify;
     margin: 2% auto;
@@ -166,6 +172,7 @@ section:nth-of-type(even) {
 }
 .gallery figure {
     width: 30%;
+    min-width: 30vh;
     padding: 2% 0;
 }
 .gallery figure img {
@@ -179,8 +186,10 @@ section:nth-of-type(even) {
 .video-container {
     position: relative;
     width: 30%;
+
+    /* aspect ratio 16/9: 30 * 9 / 16 = 16.875 */
+    min-width: 30vh;
     padding-bottom: 16.875%;
-    /* margin: 2% auto; */
 }
 .video {
     position: absolute;
@@ -203,11 +212,11 @@ section:nth-of-type(even) {
 #contact div {
     width: 50%;
     height: 25vh;
-    padding: 0 5% 0 5%;
+    padding: 0 5%;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 #contact p {
     text-align: justify;
@@ -233,12 +242,12 @@ form > label {
     font-weight: 500;
     letter-spacing: 0.1vh;
 }
-input {
+input,
+textarea {
     margin-bottom: 5%;
     padding: 1%;
 }
 input[type="button"] {
-    margin-top: 8%;
     align-self: flex-start;
     padding: 1% 3%;
     font-weight: 600;
@@ -246,8 +255,8 @@ input[type="button"] {
 
 /****************************************************************************/
 footer {
-    height: 8vh;
-    padding: 0 3%;
+    /* height: 8vh; */
+    padding: 1% 3%;
     background: var(--footer-bg);
     color: var(--main-fg-dark);
 
@@ -268,65 +277,8 @@ footer > ul {
 footer > ul > li {
     margin: 0 6.5%;
 }
-
-/****************************************************************************/
-/****************************************************************************/
-/****************************************************************************/
-/****************************************************************************/
-
-@media (max-width: 600px) {
-    #intro {
-        flex-direction: column;
-        justify-content: center;
-    }
-    #intro .text {
-        width: 100%;
-        height: 45vw;
-        align-self: flex-start;
-    }
-    h1 {
-        font-size: 3em;
-    }
-    #intro p {
-        font-size: 1.2em;
-        /* padding-bottom: 15%; */
-    }
-    #intro .image {
-        align-self: flex-end;
-        width: 100vw;
-        height: 100vw;
-    }
-
-    /****************************************************************************/
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav > ul > li {
-        margin: 0 5%;
-    }
-
-    /************************************************************************/
-    #our-story {
-        /* height: 50vh; */
-        flex-direction: column-reverse;
-        justify-content: space-between;
-        padding: 0;
-    }
-    #our-story .text {
-        width: 90%;
-        padding-top: 10%;
-    }
-
-    #our-story img {
-        width: 100%;
-        /* justify-self: end; */
-    }
-    #our-story h2 {
-    }
-    #our-story p {
-        padding: 3% 0;
-        font-size: 1.2em;
-    }
+footer a {
+    font-family: "Lora", serif;
 }
+
+/****************************************************************************/
