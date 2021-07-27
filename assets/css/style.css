@@ -89,7 +89,6 @@ nav > ul > li {
 
 /****************************************************************************/
 section {
-    /* min-height: 100vh; */
     display: flex;
 }
 section:nth-of-type(odd) {
@@ -103,8 +102,8 @@ section:nth-of-type(even) {
 
 /****************************************************************************/
 #intro {
-    display: flex;
     height: 100vh;
+    display: flex;
     justify-content: space-between;
 }
 #intro .text {
@@ -126,7 +125,6 @@ section:nth-of-type(even) {
 }
 #intro .image {
     width: 55%;
-    /* height: 90vh; */
     background: url(../img/design-interior-1.jpg) center/cover no-repeat;
 }
 
@@ -138,7 +136,7 @@ section:nth-of-type(even) {
 #our-story img {
     width: 55%;
 }
-#our-story div {
+#our-story .text {
     padding: 0 2%;
     width: 45%;
     align-self: center;
@@ -156,17 +154,19 @@ section:nth-of-type(even) {
     flex-direction: column;
     padding: 5% 0;
 }
-
 #feature p {
-    padding: 2% 25%;
+    width: 50%;
+    text-align: justify;
+    margin: 2% auto;
 }
 .gallery {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 .gallery figure {
     width: 30%;
+    padding: 2% 0;
 }
 .gallery figure img {
     width: 100%;
@@ -180,7 +180,7 @@ section:nth-of-type(even) {
     position: relative;
     width: 30%;
     padding-bottom: 16.875%;
-    margin: 2% auto;
+    /* margin: 2% auto; */
 }
 .video {
     position: absolute;
@@ -189,6 +189,59 @@ section:nth-of-type(even) {
     width: 100%;
     height: 100%;
     border: 0;
+    margin: 2% 0;
+}
+
+/****************************************************************************/
+#contact {
+    align-items: center;
+    height: 85vh;
+}
+#contact h2 {
+    text-align: left;
+}
+#contact div {
+    width: 50%;
+    height: 25vh;
+    padding: 0 5% 0 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#contact p {
+    text-align: justify;
+}
+
+/*--------------------------------------------------------------------------*/
+form {
+    width: 50%;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+form * {
+    outline: none;
+    font-family: "Work Sans", sans-serif;
+}
+
+form > label {
+    margin-bottom: 0.5%;
+    font-family: "Lora", serif;
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 0.1vh;
+}
+input {
+    margin-bottom: 5%;
+    padding: 1%;
+}
+input[type="button"] {
+    margin-top: 8%;
+    align-self: flex-start;
+    padding: 1% 3%;
+    font-weight: 600;
 }
 
 /****************************************************************************/
@@ -197,6 +250,7 @@ footer {
     padding: 0 3%;
     background: var(--footer-bg);
     color: var(--main-fg-dark);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -216,51 +270,63 @@ footer > ul > li {
 }
 
 /****************************************************************************/
-#contact {
-    align-items: center;
-    padding: 10% 0;
-}
+/****************************************************************************/
+/****************************************************************************/
+/****************************************************************************/
 
-#contact h2 {
-    text-align: left;
-}
+@media (max-width: 600px) {
+    #intro {
+        flex-direction: column;
+        justify-content: center;
+    }
+    #intro .text {
+        width: 100%;
+        height: 45vw;
+        align-self: flex-start;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    #intro p {
+        font-size: 1.2em;
+        /* padding-bottom: 15%; */
+    }
+    #intro .image {
+        align-self: flex-end;
+        width: 100vw;
+        height: 100vw;
+    }
 
-#contact div {
-    width: 50%;
-    height: 25vh;
-    padding: 0 5% 0 5%;
+    /****************************************************************************/
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+    nav > ul > li {
+        margin: 0 5%;
+    }
 
-#contact p {
-    text-align: justify;
-}
+    /************************************************************************/
+    #our-story {
+        /* height: 50vh; */
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        padding: 0;
+    }
+    #our-story .text {
+        width: 90%;
+        padding-top: 10%;
+    }
 
-/*--------------------------------------------------------------------------*/
-form {
-    width: 50%;
-    padding: 0 10%;
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 0.5%;
-    font-family: "Lora", serif;
-    font-size: 1.1em;
-    font-weight: 500;
-    letter-spacing: 0.1vh;
-}
-input {
-    margin-bottom: 5%;
-    padding: 1%;
-}
-input[type="button"] {
-    margin-top: 8%;
-    align-self: flex-start;
-    padding: 1% 3%;
-    font-weight: 600;
+    #our-story img {
+        width: 100%;
+        /* justify-self: end; */
+    }
+    #our-story h2 {
+    }
+    #our-story p {
+        padding: 3% 0;
+        font-size: 1.2em;
+    }
 }

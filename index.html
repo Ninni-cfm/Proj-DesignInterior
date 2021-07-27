@@ -27,11 +27,11 @@
 
         <!-- ************************************************************* -->
         <nav>
-            <img src="assets/img/logo.png" alt="Logo" id="logo">
+            <a href="#"><img src="assets/img/logo.png" alt="Logo" id="logo"></a>
             <ul>
                 <li><a href="#">H&H</a></li>
                 <li><a href="#our-story">OUR STORY</a></li>
-                <li><a href="#featured">DESIGNS</a></li>
+                <li><a href="#feature">DESIGNS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
@@ -40,7 +40,7 @@
         <!-- ************************************************************* -->
         <section id="our-story">
             <img src="assets/img/story.jpg" alt="Our Story">
-            <div>
+            <div class="text">
                 <h2>OUR STORY</h2>
                 <p>
                     Furnishing your home can be quite overwhelming at times, at least that's how it was for us.</p>
@@ -73,13 +73,14 @@
                     <img src="assets/img/features3.jpg" alt="Feature 3">
                     <figcaption>Image by miapirttila from Pixabay</figcaption>
                 </figure>
+                <div class="video-container">
+                    <embed class="video" src="https://www.youtube.com/embed/GI71fXmRrLM"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></embed>
+                </div>
             </div>
 
-            <div class="video-container">
-                <iframe class="video" src="https://www.youtube.com/embed/GI71fXmRrLM" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
+            <!-- --------------------------------------------------------- -->
 
         </section>
 
@@ -93,7 +94,7 @@
                     and email address</p>
             </div>
 
-            <form action="">
+            <form>
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" placeholder="Enter name" required>
 
@@ -103,7 +104,7 @@
                 <label for="message">Message</label>
                 <textarea name="message" id="message" placeholder="Optional" rows="2"></textarea>
 
-                <input type="button" value="Submit" onclick="submit()">
+                <input type="button" onclick="submitData()" value="Submit">
             </form>
         </section>
 
