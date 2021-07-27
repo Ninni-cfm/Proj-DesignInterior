@@ -32,11 +32,12 @@
 
     /****************************************************************************/
     nav {
+        position: -webkit-sticky;
         flex-direction: column;
         align-content: center;
         justify-items: center;
-        height: 8vh;
-        margin-top: -8vh;
+        height: 12vh;
+        margin-top: -12vh;
     }
 
     nav > a {
@@ -83,20 +84,24 @@
     #contact {
         flex-direction: column;
     }
-    #contact > div,
-    #contact > form {
+    #contact > div {
         width: 90%;
-        height: 45vh;
+        height: 60vh;
+        justify-content: center;
     }
     #contact h2 {
         text-align: center;
     }
 
     #contact p {
+        padding-top: 5vh;
         line-height: 1.2;
         font-size: 1.3em;
     }
-
+    #contact > form {
+        width: 80%;
+        height: 40vh;
+    }
     /************************************************************************/
     footer {
         padding: 4%;
