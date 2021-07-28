@@ -11,8 +11,6 @@
     /****************************************************************************/
     #intro {
         flex-direction: column;
-        /* justify-content: space-around; */
-        /* min-height: 90vh; */
     }
     #intro .text {
         width: 100%;
@@ -33,6 +31,7 @@
     /****************************************************************************/
     nav {
         position: -webkit-sticky;
+
         flex-direction: column;
         align-content: center;
         justify-items: center;
@@ -94,7 +93,7 @@
     }
 
     #contact p {
-        padding-top: 5vh;
+        padding-top: 3%;
         line-height: 1.2;
         font-size: 1.3em;
     }
